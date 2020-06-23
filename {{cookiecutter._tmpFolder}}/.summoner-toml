@@ -38,7 +38,7 @@ bench = {{cookiecutter.bench}}
 github = {{cookiecutter.github}}       # enabled GitHub integration
 noUpload = {{cookiecutter.noUpload}}   # Init git repo, but don't create it on GitHub
 private = {{cookiecutter.private}}     # create private repos by default
-gitignore = {{cookiecutter.gitignore}} # list of additional entries to be added in .gitignore
+gitignore = ["build", "result"], # list of additional entries to be added in .gitignore
 
 # Summoner supports various CI services. Uncomment those you want to use by default.
 githubActions = {{cookiecutter.githubActions}} # GitHub Actions CI
@@ -47,10 +47,10 @@ appveyor = {{cookiecutter.appveyor}}           # AppVeyor CI
 
 # List of additional GHC versions to support besides 8.8.3.
 # Run the 'summon show ghc' command to see the list of all supported GHC versions.
-# ghcVersions = {{cookiecutter.ghcVersions}}
+ghcVersions = ["8.6.5"]
 
 # List of default-extensions in the .cabal file
-extensions = [{{cookiecutter.extensions}}]
+extensions = []
 
 # List of additional files to add after creating the project
 # files =

@@ -14,10 +14,7 @@
   "github": true,
   "noUpload": true,
   "private": false,
-  "gitignore": ["build", "result"],
   "githubActions": true,
   "travis": true,
-  "appveyor": true,
-  "ghcVersions": ["8.6.5"],
-  "extensions": []
+  "appveyor": true
 }
