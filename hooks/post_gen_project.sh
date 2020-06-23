@@ -1,3 +1,4 @@
+#! /bin/bash
 
 projectName={{cookiecutter.projectName}}
 
