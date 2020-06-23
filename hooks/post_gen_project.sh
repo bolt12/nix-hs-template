@@ -16,8 +16,3 @@ rm shell.nix
 
 #Create new nix.shell
 echo "(import ./default.nix {}).shell" > shell.nix
-
-# Move project folder to top level and remove tmpFolder
-mv $projectName ../$projectName
-cd ..
-rm -r tmpFolder
