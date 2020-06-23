@@ -1,0 +1,23 @@
+{
+  "_tmpFolder": "tmpFolder",
+  "projectName": "test",
+  "owner": "bolt12",
+  "fullName": "Armando Santos",
+  "email": "armandoifsantos@gmail.com",
+  "license": "MIT",
+  "cabal": true,
+  "stack": true,
+  "lib": false,
+  "exe": true,
+  "test": true,
+  "bench": true,
+  "github": true,
+  "noUpload": true,
+  "private": false,
+  "gitignore": ["build", "result"],
+  "githubActions": true,
+  "travis": true,
+  "appveyor": true,
+  "ghcVersions": ["8.6.5"],
+  "extensions": []
+}
