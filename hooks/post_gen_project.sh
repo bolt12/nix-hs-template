@@ -3,13 +3,13 @@
 projectName={{cookiecutter.projectName}}
 
 # Run summoner to generate the project structure
-nix-shell -f '<nixpkgs>' -pA haskellPackages.summoner --run "summon new $projectName -f summoner.toml"
+nix-shell -p haskellPackages.summoner --run "summon new $projectName -f summoner.toml"
 
 # Run lorri
-nix-shell -f '<nixpkgs>' -pA lorri --run "lorri init"
+nix-shell -p lorri --run "lorri init"
 
 # Run niv
-nix-shell -f '<nixpkgs>' -pA niv --run "niv init"
+nix-shell -p niv --run "niv init"
 
 #Remove shell.nix created by lorri
 rm shell.nix
