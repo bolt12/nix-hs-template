@@ -3,17 +3,17 @@
 # lines for the personalized configuration.
 
 # GitHub user name
-owner = {{cookiecutter.owner}}
+owner = "{{cookiecutter.owner}}"
 
 # First and last name
-fullName = {{cookiecutter.fullName}}
+fullName = "{{cookiecutter.fullName}}"
 
 # Email used at GitHub
-email = {{cookiecutter.email}}
+email = "{{cookiecutter.email}}"
 
 # Default OSS license for your projects.
 # Run the 'summon show license' command to see the list of supported licenses.
-license = {{cookiecutter.license}}
+license = "{{cookiecutter.license}}"
 
 # Create projects with the Cabal support
 cabal = {{cookiecutter.cabal}}
