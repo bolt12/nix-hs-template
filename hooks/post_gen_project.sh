@@ -14,4 +14,4 @@ rm shell.nix
 echo "(import ./default.nix {}).shell" > shell.nix
 
 # Bring project to top-level
-mv $projectName/* . && rm -r $projectName
+mv $projectName/* . && mv $projectName/.* . && rm -r $projectName hook.nix .summoner.toml
