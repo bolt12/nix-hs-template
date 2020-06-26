@@ -29,5 +29,9 @@ let
   };
 in
   pkgs.mkShell {
-    buildInputs = [ summon ];
+    buildInputs = [
+      summon
+      pkgs.lorri
+      pkgs.niv
+    ];
   }
