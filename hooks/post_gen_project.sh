@@ -18,5 +18,5 @@ mv $projectName/* .
 mv $projectName/.git . || true
 mv $projectName/.github . || true
 mv $projectName/.gitignore . || true
-mv $projectName/.travis.yml || true
-rm -r $projectName hook.nix .summoner.toml
+mv $projectName/.travis.yml . || true
+rm -r $projectName hook.nix
