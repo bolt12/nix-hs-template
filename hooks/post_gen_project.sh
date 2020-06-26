@@ -3,7 +3,7 @@
 projectName={{cookiecutter.projectName}}
 
 # Run summoner to generate the project structure
-nix-shell summoner.nix --run "summon new $projectName -f summoner.toml"
+nix-shell summoner.nix --run "summon new $projectName -f .summoner.toml"
 
 # Run lorri
 nix-shell -p lorri --run "lorri init"
