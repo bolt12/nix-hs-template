@@ -17,6 +17,7 @@ let
       pkgs.gitAndTools.hub
       pkgs.curl
       pkgs.gmp
+      pkgs.ncurses5
     ];
 
     unpackPhase = ''
