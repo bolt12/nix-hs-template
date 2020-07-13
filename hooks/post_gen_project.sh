@@ -5,7 +5,7 @@ projectName={{cookiecutter.projectName}}
 # Run summoner to generate the project structure
 # Run lorri
 # Run niv
-nix-shell hook.nix --run "summon new $projectName && lorri init && niv init"
+nix-shell hook.nix --run "summon-tui new $projectName && lorri init && niv init"
 
 # Remove shell.nix created by lorri
 rm shell.nix

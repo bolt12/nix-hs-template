@@ -4,8 +4,8 @@ let
     name = "summon-cli-linux";
 
     src = pkgs.fetchurl {
-      url = "https://github.com/kowainik/summoner/releases/download/v2.0.1.1/summon-cli-linux";
-      sha256 = "6fd241abfc834d3c55f915eaf9e2927d01da0474e84fff18ebca6d67d0c0c117";
+      url = "https://github.com/kowainik/summoner/releases/download/v2.0.1.1/summon-tui-linux";
+      sha256 = "25c12dfbad5d967c5f3a9c5bc7cf9364dbb7e9a95b83b1ae6b84339afccd6018";
     };
 
     nativeBuildInputs = [
@@ -24,13 +24,13 @@ let
     '';
 
     installPhase = ''
-      install -m755 -D $src $out/bin/summon
+      install -m755 -D $src $out/bin/summon-tui
     '';
   };
 in
   pkgs.mkShell {
     buildInputs = [
-      summon
+      summon-tui
       pkgs.lorri
       pkgs.niv
     ];

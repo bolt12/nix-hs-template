@@ -23,7 +23,7 @@ Once that completes, `cd` into the directory and call:
 nix-shell
 ```
 
-(includes: `ghc865`, `cabal`, `hoogle`, `ghcid`, `ormolu`, `hlint`, `lorri`, `niv` and `nixpkgs-fmt`)
+(includes: `ghc883`, `cabal`, `hoogle`, `ghcid`, `ormolu`, `hlint`, `lorri`, `niv` and `nixpkgs-fmt`)
 
 Or you can directly build the executable for your project with:
 
