@@ -1,6 +1,6 @@
 let
   pkgs = import <nixpkgs> {};
-  summon = pkgs.stdenv.mkDerivation {
+  summon-tui = pkgs.stdenv.mkDerivation {
     name = "summon-cli-linux";
 
     src = pkgs.fetchurl {
