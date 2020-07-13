@@ -1,7 +1,7 @@
 let
   pkgs = import <nixpkgs> {};
   summon-tui = pkgs.stdenv.mkDerivation {
-    name = "summon-cli-linux";
+    name = "summon-tui-linux";
 
     src = pkgs.fetchurl {
       url = "https://github.com/kowainik/summoner/releases/download/v2.0.1.1/summon-tui-linux";
