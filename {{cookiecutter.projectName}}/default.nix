@@ -137,11 +137,11 @@ let
       ghcid
       ormolu
       hlint
-      lorri
+      pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
     ];
-    withHoogle = true;
+    withHoogle = false; # This has a strange bug and needs to be false
   };
 
   exe = pkgs.haskell.lib.justStaticExecutables (myHaskellPackages."{{cookiecutter.projectName}}");
