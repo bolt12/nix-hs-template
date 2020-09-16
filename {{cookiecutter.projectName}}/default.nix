@@ -141,7 +141,7 @@ let
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
     ];
-    withHoogle = false; # This has a strange bug and needs to be false
+    withHoogle = true;
   };
 
   exe = pkgs.haskell.lib.justStaticExecutables (myHaskellPackages."{{cookiecutter.projectName}}");
