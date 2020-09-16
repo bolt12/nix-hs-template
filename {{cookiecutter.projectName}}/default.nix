@@ -132,11 +132,11 @@ let
     packages = p: [
       p."{{cookiecutter.projectName}}"
     ];
-    buildInputs = with pkgs.haskellPackages; [
-      myHaskellPackages.cabal-install
-      ghcid
-      ormolu
-      hlint
+    buildInputs = [
+      pkg.haskellPackages.cabal-install
+      pkgs.haskellPackages.ghcid
+      pkgs.haskellPackages.ormolu
+      pkgs.haskellPackages.hlint
       pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
