@@ -133,7 +133,7 @@ let
       p."{{cookiecutter.projectName}}"
     ];
     buildInputs = [
-      pkg.haskellPackages.cabal-install
+      pkgs.haskellPackages.cabal-install
       pkgs.haskellPackages.ghcid
       pkgs.haskellPackages.ormolu
       pkgs.haskellPackages.hlint
