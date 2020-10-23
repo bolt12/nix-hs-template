@@ -133,15 +133,22 @@ let
       p."{{cookiecutter.projectName}}"
     ];
     buildInputs = [
-      pkgs.haskellPackages.cabal-install
-      pkgs.haskellPackages.ghcid
-      pkgs.haskellPackages.ormolu
-      pkgs.haskellPackages.hlint
+      myHaskellPackages.cabal-install
       pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
     ];
     withHoogle = true;
+  };
+
+  stack = pkgs.haskell.lib.buildStackProject {
+    name = "{{cookiecutter.projectName}}";
+    buildInputs = with pkgs.haskellPackages; [
+      myHaskellPackages.cabal-install
+      pkgs.lorri
+      (import sources.niv {}).niv
+      pkgs.nixpkgs-fmt
+    ];
   };
 
   exe = pkgs.haskell.lib.justStaticExecutables (myHaskellPackages."{{cookiecutter.projectName}}");
@@ -154,6 +161,7 @@ in
 {
   inherit shell;
   inherit exe;
+  inherit stack;
   inherit docker;
   inherit myHaskellPackages;
   "{{cookiecutter.projectName}}" = myHaskellPackages."{{cookiecutter.projectName}}";
