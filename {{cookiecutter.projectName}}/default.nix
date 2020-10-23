@@ -133,7 +133,7 @@ let
       p."{{cookiecutter.projectName}}"
     ];
     buildInputs = [
-      myHaskellPackages.cabal-install
+      pkgs.haskellPackages.cabal-install
       pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
@@ -144,7 +144,7 @@ let
   stack = pkgs.haskell.lib.buildStackProject {
     name = "{{cookiecutter.projectName}}";
     buildInputs = with pkgs.haskellPackages; [
-      myHaskellPackages.cabal-install
+      pkgs.haskellPackages.cabal-install
       pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
