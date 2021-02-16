@@ -8,6 +8,12 @@ projectName={{cookiecutter.projectName}}
 nix-shell hook.nix --run "summon-tui new $projectName"
 nix-shell hook.nix --run "lorri init && niv init"
 
+# Add all-hls to niv
+niv add masaeedu/all-hls
+
+# Update niv
+niv update
+
 # Remove shell.nix created by lorri
 rm shell.nix
 

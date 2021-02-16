@@ -10,6 +10,10 @@ let
   # > niv update nixpkgs -b nixos-19.09
   pkgs = import sources.nixpkgs {};
 
+  # all-hls repository
+  # Please be aware to match the same compiler version
+  hls = import sources.all-hls { platform = "Linux"; version = "0.8.0"; ghc = "8.8.3"; }; # All parameters are optional. The default values are shown here.
+
   gitignore = pkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
 
   # To add external sources with 'niv' from Hackage do the following:
@@ -137,6 +141,7 @@ let
       pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
+      hls
     ];
     withHoogle = true;
   };
@@ -148,6 +153,7 @@ let
       pkgs.lorri
       (import sources.niv {}).niv
       pkgs.nixpkgs-fmt
+      hls
     ];
   };
 
