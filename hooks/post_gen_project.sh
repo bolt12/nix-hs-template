@@ -31,4 +31,7 @@ echo "nix:
   enable: true
   shell-file: stack.nix
   " >> stack.yaml || true
+
 rm -r $projectName hook.nix
+
+echo "All done!"
