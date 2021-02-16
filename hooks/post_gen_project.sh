@@ -12,7 +12,9 @@ nix-shell hook.nix --run "lorri init && niv init"
 niv add masaeedu/all-hls
 
 # Update niv
+niv init
 niv update
+niv update nixpkgs -b 20.09
 
 # Remove shell.nix created by lorri
 rm shell.nix
