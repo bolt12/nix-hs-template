@@ -23,7 +23,7 @@ Once that completes, `cd` into the directory and call:
 nix-shell
 ```
 
-(includes: `ghc883`, `cabal`, `hoogle`, `ghcid`, `ormolu`, `hlint`, `lorri`, `niv` and `nixpkgs-fmt`)
+(includes: `ghc884`, `cabal`, `hoogle`, `hls`, `ormolu`, `hlint`, `lorri`, `niv` and `nixpkgs-fmt`)
 
 Or you can directly build the executable for your project with:
 
@@ -44,6 +44,9 @@ docker load -i result
 ```
 
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/latest/readme.html
+
+**NOTE**: Might be required to change the resolver to match the compiler version specified in
+`default.nix`.
 
 ## Cheat Sheet
 

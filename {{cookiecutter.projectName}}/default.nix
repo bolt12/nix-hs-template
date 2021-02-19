@@ -12,7 +12,7 @@ let
 
   # all-hls repository
   # Please be aware to match the same compiler version
-  hls = import sources.all-hls { platform = "Linux"; version = "0.4.0"; ghc = "8.8.4"; }; # All parameters are optional. The default values are shown here.
+  hls = import sources.all-hls { platform = "Linux"; version = "0.9.0"; ghc = "8.8.4"; }; # All parameters are optional. The default values are shown here.
 
   gitignore = pkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
 
